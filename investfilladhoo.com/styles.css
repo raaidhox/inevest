@@ -1,0 +1,340 @@
+:root {
+    --nav-h: 60px;           /* ① define it once */
+    
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* center everything horizontally */
+  }
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--nav-h);
+  
+  }
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+  }
+
+  li{
+    text-align: left;
+  }
+
+  .hbutton{
+    display: inline-block;
+    margin: 20px;
+  }
+
+  .button{
+    text-decoration: none;
+    background-color:rgb(0, 18, 51);
+    border-radius: 100px;
+    padding: 10px;
+    color: white;
+  }
+
+  .button.footer{
+    background-color:rgb(153, 189, 255);
+  }
+
+  .button:hover{
+    text-decoration: none;
+    background-color: rgb(0, 166, 58);
+    border-radius: 100px;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hbutton {
+    
+      margin: 20px;            /* tighten up the wrapper */
+    }
+    .button {
+      padding: 8px 16px;       /* smaller touch area */
+      font-size: 0.5rem;       /* reduce text size slightly */
+      border-radius: 10px;     /* keep pill shape but smaller */
+    }
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 18, 51);
+    z-index: 1000;
+    height: var(--nav-h);
+    text-align: left;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 1px ;
+  }
+  
+  nav li {
+    display: inline-block;
+    padding: 2px;
+    text-decoration: none;
+    background-color:bisque;
+    border-radius: 100px;
+    padding: 10px;
+
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(52, 51, 51);
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;   /* a little breathing room each side */
+        margin: 0;
+
+      }
+    
+      nav li {
+        flex: 1;            /* each li takes an even slice of the row */
+        margin: 10px 4px;      /* tiny gutters between buttons */
+        text-align: center;
+        padding: 6px 0;     /* shorter vertical padding */
+      }
+    
+      nav a {
+        display: block;     /* let the link fill its li */
+        font-size: 0.5rem; /* slightly smaller text */
+        padding: 0 5px;     /* optional extra horizontal padding */
+      }
+    }
+
+
+
+  .background {
+    /* Semi-transparent luxury grey */
+    background: rgba(131, 129, 125, 0.6);
+    
+    /* Soft blur behind for depth (supported in modern browsers) */
+    backdrop-filter: blur(8px);
+   
+    
+    /* Padding & centering */
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    /* Rounded corners & subtle shadow */
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    
+    /* Text contrast */
+    color: #000000;
+    
+    /* Ensure any child images or backgrounds cover fully */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background2{
+    /* Semi-transparent luxury grey */
+    background: rgba(251, 255, 250, 0.6);
+    
+    /* Soft blur behind for depth (supported in modern browsers) */
+    backdrop-filter: blur(8px);
+   
+    
+    /* Padding & centering */
+    padding: 2rem;
+    max-width: 800px;
+    margin: 15px;
+    
+    /* Rounded corners & subtle shadow */
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    
+    /* Text contrast */
+    color: #000000;
+    
+    /* Ensure any child images or backgrounds cover fully */
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1 {
+    /* Elegant serif from Google Fonts */
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    font-size: 3rem;
+    
+    /* Centered, spacious lettering */
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin: 2.5rem 0 1rem;
+    
+    /* Deep charcoal for a soft luxury look */
+    color: #2a2a2a;
+    line-height: 1.2;
+    
+    position: relative;
+  }
+  
+  /* Thin, muted underline accent */
+  .luxury-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: #2a2a2a;
+    opacity: 0.6;
+    margin: 0.5rem auto 0;
+  }
+  
+  
+p, .listdeco li{
+/* San Francisco on Apple devices, Segoe on Windows, Roboto on Android */
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+font-weight: 400;
+font-size: 17px;           /* matches Apple’s default body size */
+line-height: 1.47;         /* Apple uses ~147% line-height */
+
+/* Apple-style grey, not pure black */
+color: #1D1D1F;
+
+/* Subtle letter-spacing */
+letter-spacing: -0.022em;
+
+/* Smooth on-screen text */
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+
+/* Spacing between paragraphs */
+margin-bottom: 16px;
+
+/* Left align for a clean reading edge */
+text-align: left;
+}
+  
+h2 {
+    /* Match your body—system font stack for consistency */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                 Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    
+    /* A bit bolder than body text */
+    font-weight: 600;
+    
+    /* Scale up for section headings */
+    font-size: 1.5rem;       /* 24px if your root is 16px */
+    line-height: 1.25;       /* tight but readable */
+    
+    /* Same charcoal tone */
+    color: #7f7f96;
+    
+    /* Slightly tighter letter-spacing for a refined look */
+    letter-spacing: -0.01em;
+    
+    /* Breathing room above and below */
+    margin: 1.5rem 0 0.75rem;}
+
+    h3 {
+        /* Continue the system font stack for consistency */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        
+        /* Medium weight for sub-titles */
+        font-weight: 500;
+        
+        /* Slightly smaller than h2 */
+        font-size: 1.25rem;       /* ~20px */
+        line-height: 1.3;         /* comfortable reading rhythm */
+        
+        /* Same off-black tone */
+        color: #1D1D1F;
+        
+        /* Very subtle letter tightening */
+        letter-spacing: -0.008em;
+        
+        /* Vertical spacing */
+        margin: 1rem 0 0.5rem;    /* 1rem top, .5rem bottom */}
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+  }
+
+  footer{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 18, 51);
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  footer p{
+    display: inline-block;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    footer p {
+      font-size: 0.4rem;
+    }
+  
+    footer {
+      padding: 20px 10px;
+      margin-top: 10px;
+    }
+  }
+
+
+.line {
+    border: none;
+
+    margin: 25px 0px;
+    border-top: solid 10px darkgreen;
+}
+
